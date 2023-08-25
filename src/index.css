@@ -1,0 +1,148 @@
+/*================= Google Fonts Link ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*================= End Of Google Fonts Link =================*/
+
+/*================= Root Colors =================*/
+:root {
+  --white: #fff;
+  --black: #111;
+  --blue: #3a80e9;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
+  --green: #61c96f;
+  --red: #f94141;
+}
+/*================= End Of Root Colors =================*/
+
+/*================= Dark Theme =================*/
+[data-theme="dark"] {
+  --white: #ffffff;
+  --black: #111;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
+}
+/*================= End Of Dark Theme =================*/
+
+/*================= Light Theme =================*/
+[data-theme="light"] {
+  --white: #111;
+  --black: #fff;
+  --grey: #888;
+  --darkgrey: #f3f3f3;
+}
+/*================= End Of Light Theme =================*/
+
+/*================= html tag =================*/
+html {
+  scroll-behavior: smooth;
+}
+/*================= End Of html tag =================*/
+
+/*================= Body =================*/
+body {
+  margin: 0;
+  background-color: var(--black);
+  color: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", sans-serif;
+}
+/*================= End Of Body =================*/
+
+/*================= Custom Selector =================*/
+::selection {
+  background-color: var(--blue);
+  color: var(--white);
+}
+/*================= End Of Custom Selector =================*/
+
+/*================= Custom Scroll-Bar =================*/
+/*================= Width =================*/
+::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+/*================= Track =================*/
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+/*================= Handle =================*/
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 3rem;
+}
+/*================= End Of Custom Scroll-Bar =================*/
+
+/*================= Anchor Tag =================*/
+a {
+  color: var(--white) !important;
+  text-decoration: none !important;
+}
+/*================= End Of Anchor Tag =================*/
+
+/*================= Disable Draggable Image =================*/
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  }
+/*================= End Of Disable Draggable Image =================*/
+
+.grey-wrapper {
+  display:"block";
+  width:90%;
+  background-color:var(--darkgrey);
+  margin:1.5rem auto;
+  border-radius:0.8rem;
+  padding : 1rem 1rem;
+}
+
+.coins-days-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1.5rem;
+  gap: 2rem;
+}
+
+.cursor {
+  position: fixed;
+  transform: translateX(-50%)  translateY(-50%);
+  pointer-events: none;
+  background-color: var(--blue);
+  z-index: 10000;
+  border : 2px solid var(--blue);
+  height: 0.3rem;
+  width: 0.3rem;
+  border-radius: 50%;
+  transition: all 200ms ease-out;
+}
+
+.cursor-pointer {
+  position: fixed;
+  transform: translateX(-50%)  translateY(-50%);
+  pointer-events: none;
+  background-color: transparent;
+  z-index: 10000;
+  border : 2px solid var(--blue);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  transition: all 400ms ease-out;
+}
+
+.dashboardData {
+  margin-bottom: 4rem;
+}
+
+.data-flex {
+  margin-bottom: 3rem;
+}
+
+@media only screen and (max-width : 600px) {
+  .cursor , .cursor-pointer {
+    display: none;
+  }
+} 
